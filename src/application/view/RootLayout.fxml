@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="272.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.RootLayoutController">
+   <children>
+      <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePrevGen" text="Previous Gen" />
+      <Button layoutX="268.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleNextGen" text="Next Gen" />
+      <Label fx:id="boardLabel" alignment="CENTER" layoutX="14.0" layoutY="49.0" prefHeight="199.0" prefWidth="320.0" textAlignment="CENTER">
+         <font>
+            <Font name="MS Gothic" size="18.0" />
+         </font></Label>
+      <Button layoutX="88.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleNewBoard" text="New Board" />
+      <TextField fx:id="widthText" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="32.0" promptText="w" />
+      <TextField fx:id="heightText" layoutX="51.0" layoutY="14.0" prefHeight="25.0" prefWidth="32.0" promptText="h" />
+      <Label layoutX="13.0" layoutY="240.0" text="Current Generation" />
+      <Label fx:id="currentGenerationLabel" layoutX="126.0" layoutY="240.0" />
+   </children>
+</AnchorPane>

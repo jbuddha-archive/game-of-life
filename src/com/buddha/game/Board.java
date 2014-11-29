@@ -7,6 +7,8 @@ public class Board implements World {
 	private State[][] _grid;
 	private State[][] _tempgrid;
 	private int _width, _height;
+	
+	static String lineEnd = System.lineSeparator();
 
 	int getHeight() {
 		return _height;
@@ -103,13 +105,21 @@ public class Board implements World {
 
 	@Override
 	public void print() {
-		for (State[] row : _grid) {
-			System.out.print("|");
-			for (State cell : row)
-				System.out.print(cell);
-			System.out.println("|");
-		}
+		System.out.println(toString());
 
+	}
+	
+	@Override
+	public String toString(){
+		
+		StringBuffer string = new StringBuffer();
+		for (State[] row : _grid) {
+		//	string.append("|");
+			for (State cell : row)
+				string.append(cell);
+			string.append(lineEnd);
+		}
+		return string.toString();
 	}
 
 	@Override
